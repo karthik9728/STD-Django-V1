@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product</title>
+  </head>
+  <body>
+    <form method="post">
+      {% comment %} csfr token is required for security purpose when submit a
+      from {% endcomment %} {% csrf_token %} {% comment %} Variable Substitution
+      {% endcomment %} {{form.as_p}}
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
