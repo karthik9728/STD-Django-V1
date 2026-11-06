@@ -6,5 +6,6 @@ urlpatterns = [
     path('function',views.productFun),
     path('class',views.ProductView.as_view()),
     path('create',views.create),
-    path('',views.get)
+    path('',views.get,name="get"),
+    path('<int:id>',views.details,name="details")
 ]

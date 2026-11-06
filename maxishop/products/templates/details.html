@@ -1,0 +1,44 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+
+    <link rel="stylesheet" href="{% static 'product.css' %}" />
+  </head>
+
+  <body>
+    <div class="details-container">
+      <h2>Product Details</h2>
+
+      <div class="details-card">
+        <div class="detail-row">
+          <span>Product ID</span>
+          <strong>{{ product.id }}</strong>
+        </div>
+
+        <div class="detail-row">
+          <span>Product Name</span>
+          <strong>{{ product.name }}</strong>
+        </div>
+
+        <div class="detail-row">
+          <span>Price</span>
+          <strong>₹ {{ product.price }}</strong>
+        </div>
+
+        <div class="detail-row">
+          <span>Created On</span>
+          <strong>{{ product.created_on }}</strong>
+        </div>
+      </div>
+
+      <div class="details-actions">
+        <a href="{% url 'get' %}" class="btn back-btn"> Back to Products </a>
+      </div>
+    </div>
+  </body>
+</html>

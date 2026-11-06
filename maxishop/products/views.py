@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views import View
 from .form import ProductForm
@@ -29,3 +29,7 @@ def create(request):
 def get(request):
     products = Product.objects.all()
     return render(request,"index.html",{'products':products})
+
+def details(request,id):
+    product = get_object_or_404(Product,id = id)
+    return render(request, 'details.html', {'product': product})

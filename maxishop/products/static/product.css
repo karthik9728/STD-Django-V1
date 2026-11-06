@@ -95,3 +95,87 @@ tr:hover {
     text-align: center;
   }
 }
+
+/* Product Details Container */
+.details-container {
+  max-width: 550px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.details-container h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Details Card */
+.details-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Individual Detail Row */
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove Last Border */
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+/* Labels */
+.detail-row span {
+  color: #666;
+  font-size: 15px;
+}
+
+/* Values */
+.detail-row strong {
+  color: #333;
+  font-size: 15px;
+}
+
+/* Action Container */
+.details-actions {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .details-container {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .detail-row {
+    padding: 14px;
+  }
+}
