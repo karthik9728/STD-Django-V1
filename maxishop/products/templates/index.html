@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'product.css' %}" />
   </head>
   <body>
     <h2>Product Details</h2>
@@ -29,7 +29,13 @@
         {% endcomment %}
         <td>{{ x.name }}</td>
         <td>{{ x.price }}</td>
-        <td>Edit</td>
+        <td>
+          <div class="action-buttons">
+            <a href="#" class="btn details-btn">Details</a>
+            <a href="#" class="btn edit-btn">Edit</a>
+            <a href="#" class="btn delete-btn">Delete</a>
+          </div>
+        </td>
         {% comment %}
         <td>{{ x.created_on }}</td>
         {% endcomment %}
