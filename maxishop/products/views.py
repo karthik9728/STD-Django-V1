@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from django.views import View
 from .form import ProductForm
@@ -24,7 +24,21 @@ def create(request):
         if form.is_valid():
             form.save()
             return HttpResponse("Success")
-    return render(request,'create.html',{'form':form})
+    return render(request,'product_form.html',{'form':form})
+
+def upsert(request,id=None):
+    product = None
+    if id:
+        product = get_object_or_404(Product, id=id)
+    if request.method == "POST":
+        form = ProductForm(request.POST,instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('product')
+    else:
+        form = ProductForm(instance=product)
+
+    return render(request,'product_form.html',{'form':form})
 
 def get(request):
     products = Product.objects.all()

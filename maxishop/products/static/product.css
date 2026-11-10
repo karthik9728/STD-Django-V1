@@ -5,11 +5,6 @@ body {
   padding: 30px;
 }
 
-h2 {
-  text-align: center;
-  color: #333;
-}
-
 table {
   width: 80%;
   margin: 30px auto;
@@ -56,6 +51,15 @@ tr:hover {
   font-weight: bold;
   border: none;
   cursor: pointer;
+}
+
+/* Add Product Button */
+.action-buttons .add-btn {
+  background-color: #28a745;
+}
+
+.action-buttons .add-btn:hover {
+  background-color: #218838;
 }
 
 .action-buttons .details-btn {
@@ -177,5 +181,192 @@ tr:hover {
 
   .detail-row {
     padding: 14px;
+  }
+}
+
+/* Product Form Container */
+.form-container {
+  max-width: 550px;
+  margin: 60px auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.form-container h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Paragraphs */
+.form-container p {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input Focus */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Submit Button */
+.form-container button {
+  width: 100%;
+  padding: 13px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Validation Errors */
+.form-container .errorlist {
+  color: #dc3545;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: 5px;
+}
+
+/* Help Text */
+.form-container .helptext {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-container {
+    margin: 30px 15px;
+    padding: 25px 20px;
+  }
+}
+
+/* Product Form Container */
+.form-container {
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 35px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.form-container h2 {
+  color: #333;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+/* Form Fields */
+.form-container form p {
+  margin-bottom: 22px;
+}
+
+/* Labels */
+.form-container form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.form-container form input,
+.form-container form select,
+.form-container form textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input Focus */
+.form-container form input:focus,
+.form-container form select:focus,
+.form-container form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Submit Button */
+.form-container form button {
+  width: 100%;
+  padding: 13px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container form button:hover {
+  background-color: #0056b3;
+}
+
+/* Validation Errors */
+.form-container .errorlist {
+  color: #dc3545;
+  font-size: 13px;
+  padding-left: 18px;
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  .form-container {
+    margin: 30px auto;
+    padding: 25px 20px;
   }
 }

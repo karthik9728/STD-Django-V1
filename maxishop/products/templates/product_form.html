@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'product.css' %}" />
+    {% comment %} pk means Primary Key in Django. It represents the unique ID of
+    a database record. {% endcomment %}
+    <title>
+      {% if form.instance.pk %} Update Product {% else %} Create Product
+      {%endif%}
+    </title>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h2>
+        {% if form.instance.pk %} Update Product {% else %} Create
+        Product{%endif %}
+      </h2>
+
+      <form method="post">
+        {% comment %} csfr token is required for security purpose when submit a
+        from {% endcomment %} {% csrf_token %} {% comment %} Variable
+        Substitution {% endcomment %} {{form.as_p}}
+        <button type="submit">
+          {% if form.instance.pk %} Update Product {% else %} Create Product
+          {%endif %}
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
